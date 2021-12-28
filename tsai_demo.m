@@ -44,7 +44,7 @@ T_g_c = inv(T_c_g);
 
 %% generate grigper2base
 
-N = 16;
+N = 14;
 T_b_g_list = zeros(4, 4, N);
 T_t_c_list = zeros(4, 4, N);
 
