@@ -33,7 +33,7 @@ for i = 1:N
             0,0,0,   1];
 
     T_t_c_list(:,:,i) = T_t_c;
-    T_b_g_list(:,:,i) = inv(T_b_g);
+    T_b_g_list(:,:,i) = T_b_g;
 end
 
 %% calculate Gij and Cij
@@ -42,7 +42,8 @@ Cij_list = [];
 K = 5;
 for k = 1:K
     seq = randperm(N);
-    i, j = seq(1:2);            % random select two pose.
+    i = seq(1);
+    j = seq(2);
     Gij = inv(T_b_g_list(:,:,i)) * T_b_g_list(:,:,j);
     Cij = inv(T_t_c_list(:,:,i)) * T_t_c_list(:,:,j);
     Gij_list = [Gij_list, Gij];
