@@ -4,19 +4,19 @@
 
 ## File 
 
-Main files:
-`calibHandEye.m`: hand eye calibration main function. Use `cam2target.csv` and `gripper2base.csv` andd using Tsai method to calculate the camera2gripper
-`tsai.m`: Tsai method.
-`cameraParams.mat`: camera instrinsics (calibrated ahead)
-`Rodrigues.m`/`invRodrigues.m`: rotation axis to rotation matrix / matrix2axis.
+Main files:  
+`calibHandEye.m`: hand eye calibration main function. Use `cam2target.csv` and `gripper2base.csv` andd using Tsai method to calculate the camera2gripper  
+`tsai.m`: Tsai method.  
+`cameraParams.mat`: camera instrinsics (calibrated ahead)  
+`Rodrigues.m`/`invRodrigues.m`: rotation axis to rotation matrix / matrix2axis.  
 
-Other files:
-`generate_cam2target.m`: generate (from images) camera to target transformation. Save data into `cam2target.csv` as axis-angle format (rvec, tvec).
-`generate_gripper2base.m`: generate (from VICON) gripper to base transformation. Save data into `gripper2base.csv` as axis-angle format (rvec, tvec).
-`calcCameraPose.m`: function to calculate camera pose in target frame.
---image: all images from a USB camera
---vicon_data: gripper from a VICON system
---scripts: some codes for simulation (not used. Only for my own backup)
+Other files:  
+`generate_cam2target.m`: generate (from images) camera to target transformation. Save data into `cam2target.csv` as axis-angle format (rvec, tvec).  
+`generate_gripper2base.m`: generate (from VICON) gripper to base transformation. Save data into `gripper2base.csv` as axis-angle format (rvec, tvec).  
+`calcCameraPose.m`: function to calculate camera pose in target frame.  
+--image: all images from a USB camera  
+--vicon_data: gripper from a VICON system  
+--scripts: some codes for simulation (not used. Only for my own backup)  
 
 
 ## Usage
