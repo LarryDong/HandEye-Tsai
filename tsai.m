@@ -1,4 +1,6 @@
+
 function X = tsai(A,B)
+
 % Calculates the least squares solution of
 % AX = XB
 % 
@@ -22,7 +24,6 @@ function X = tsai(A,B)
 S = zeros(3*n,3);
 v = zeros(3*n,1);
 
-
 %% Calculate best rotation R
 for i = 1:n
     A1 = logm(A(1:3,4*i-3:4*i-1));                  % 计算旋转对应的反对称矩阵：exp(\phi^)=Aij，其中\phi^是旋转轴\phi的反对称矩阵，即下面的a
@@ -35,7 +36,7 @@ end
 
 x = S\v;                            % x is Pcg' in Eq.12
 theta = 2*atan(norm(x));
-eps = 0.0000000001;                      % avoid divide-by-zero. Added by LarryDong
+eps = 0.0000000000001;                      % avoid divide-by-zero. Added by LarryDong
 x = x/(norm(x)+eps);
 R = (eye(3)*cos(theta) + sin(theta)*skew(x) + (1-cos(theta))*x*x')';    % Rodrigues. (Eq.10)
 
